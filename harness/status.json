@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-03-10",
-  "session_summary": "Foundation complete: scaffold, types, Firebase, LoginPage, useOnboarding, Onboarding, useFirestore.",
+  "session_summary": "All 22 build tasks complete and tested. 50 frontend tests + 3 backend tests passing. Production build succeeds. Ready for deployment (Firebase Hosting + Cloud Run).",
   "features": [
     { "id": "scaffold", "name": "Frontend scaffold + Vitest", "status": "tested" },
     { "id": "types", "name": "Shared TypeScript types", "status": "tested" },
@@ -8,24 +8,27 @@
     { "id": "login", "name": "LoginPage (Google Sign-In)", "status": "tested" },
     { "id": "onboarding", "name": "Onboarding component + useOnboarding", "status": "tested" },
     { "id": "firestore", "name": "useFirestore hook", "status": "tested" },
-    { "id": "chess-board", "name": "ChessBoard component", "status": "pending" },
-    { "id": "use-chess-game", "name": "useChessGame hook", "status": "pending" },
-    { "id": "use-stockfish", "name": "useStockfish hook", "status": "pending" },
-    { "id": "use-move-hints", "name": "useMoveHints hook", "status": "pending" },
-    { "id": "game-page", "name": "GamePage", "status": "pending" },
-    { "id": "mini-chess-engine", "name": "MiniChess.ts + stageConfigs", "status": "pending" },
-    { "id": "use-mini-chess", "name": "useMiniChess hook", "status": "pending" },
-    { "id": "mini-stage", "name": "MiniStage component", "status": "pending" },
-    { "id": "use-voice", "name": "useVoice hook", "status": "pending" },
-    { "id": "coach-panel", "name": "CoachPanel component", "status": "pending" },
-    { "id": "coach-api", "name": "coachApi.ts service", "status": "pending" },
-    { "id": "backend", "name": "FastAPI backend", "status": "pending" },
-    { "id": "routing", "name": "App routing", "status": "pending" },
-    { "id": "tests", "name": "Full test suite", "status": "pending" },
+    { "id": "chess-board", "name": "ChessBoard component", "status": "tested" },
+    { "id": "use-chess-game", "name": "useChessGame hook", "status": "tested" },
+    { "id": "use-stockfish", "name": "useStockfish hook", "status": "tested" },
+    { "id": "use-move-hints", "name": "useMoveHints hook", "status": "tested" },
+    { "id": "game-page", "name": "GamePage", "status": "tested" },
+    { "id": "mini-chess-engine", "name": "MiniChess.ts + stageConfigs", "status": "tested" },
+    { "id": "use-mini-chess", "name": "useMiniChess hook", "status": "tested" },
+    { "id": "mini-stage", "name": "MiniStage component", "status": "tested" },
+    { "id": "use-voice", "name": "useVoice hook", "status": "tested" },
+    { "id": "coach-panel", "name": "CoachPanel component", "status": "tested" },
+    { "id": "coach-api", "name": "coachApi.ts service", "status": "tested" },
+    { "id": "backend", "name": "FastAPI backend", "status": "tested" },
+    { "id": "routing", "name": "App routing", "status": "tested" },
+    { "id": "tests", "name": "Full test suite (50 frontend + 3 backend)", "status": "tested" },
     { "id": "deploy", "name": "Deploy to Firebase + Cloud Run", "status": "pending" }
   ],
   "next_actions": [
-    "Build ChessBoard component (Task 9)",
-    "Build useChessGame hook (Task 10)"
+    "Get Firebase project ID from console and fill in .firebaserc",
+    "Get GEMMA_API_KEY from Google AI Studio",
+    "Deploy backend: gcloud run deploy chess-tutor-api --source backend/ ...",
+    "Update frontend/.env.production with deployed Cloud Run URL",
+    "Deploy frontend: firebase deploy --only hosting"
   ]
 }
