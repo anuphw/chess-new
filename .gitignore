@@ -1,3 +1,6 @@
 .superpowers/
 .worktrees/
 .env.local
+__pycache__/
+*.pyc
+backend/.venv/
