@@ -1,17 +1,31 @@
 {
-  "last_updated": "YYYY-MM-DD",
-  "session_summary": "Project just initialized. No features implemented yet.",
+  "last_updated": "2026-03-10",
+  "session_summary": "Foundation complete: scaffold, types, Firebase, LoginPage, useOnboarding, Onboarding, useFirestore.",
   "features": [
-    {
-      "id": "example-feature",
-      "name": "Example Feature",
-      "status": "pending",
-      "notes": "Replace this with your first real feature"
-    }
+    { "id": "scaffold", "name": "Frontend scaffold + Vitest", "status": "tested" },
+    { "id": "types", "name": "Shared TypeScript types", "status": "tested" },
+    { "id": "firebase", "name": "Firebase service init", "status": "tested" },
+    { "id": "login", "name": "LoginPage (Google Sign-In)", "status": "tested" },
+    { "id": "onboarding", "name": "Onboarding component + useOnboarding", "status": "tested" },
+    { "id": "firestore", "name": "useFirestore hook", "status": "tested" },
+    { "id": "chess-board", "name": "ChessBoard component", "status": "pending" },
+    { "id": "use-chess-game", "name": "useChessGame hook", "status": "pending" },
+    { "id": "use-stockfish", "name": "useStockfish hook", "status": "pending" },
+    { "id": "use-move-hints", "name": "useMoveHints hook", "status": "pending" },
+    { "id": "game-page", "name": "GamePage", "status": "pending" },
+    { "id": "mini-chess-engine", "name": "MiniChess.ts + stageConfigs", "status": "pending" },
+    { "id": "use-mini-chess", "name": "useMiniChess hook", "status": "pending" },
+    { "id": "mini-stage", "name": "MiniStage component", "status": "pending" },
+    { "id": "use-voice", "name": "useVoice hook", "status": "pending" },
+    { "id": "coach-panel", "name": "CoachPanel component", "status": "pending" },
+    { "id": "coach-api", "name": "coachApi.ts service", "status": "pending" },
+    { "id": "backend", "name": "FastAPI backend", "status": "pending" },
+    { "id": "routing", "name": "App routing", "status": "pending" },
+    { "id": "tests", "name": "Full test suite", "status": "pending" },
+    { "id": "deploy", "name": "Deploy to Firebase + Cloud Run", "status": "pending" }
   ],
   "next_actions": [
-    "Fill in harness/CONTEXT.md with your project's architecture",
-    "Replace the example feature in status.json with real features",
-    "Run harness/scripts/test.sh to verify the test setup works"
+    "Build ChessBoard component (Task 9)",
+    "Build useChessGame hook (Task 10)"
   ]
 }
