@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { MiniChess } from '../engine/MiniChess'
 import { STAGE_CONFIGS } from '../engine/stageConfigs'
 
@@ -14,6 +14,17 @@ export function useMiniChess(initialStage: number) {
   const [board, setBoard] = useState(gameRef.current.getBoard())
 
   const refreshBoard = () => setBoard(gameRef.current.getBoard())
+
+  useEffect(() => {
+    setStage(initialStage)
+    setWinsAtStage(0)
+    gameRef.current = new MiniChess(STAGE_CONFIGS[initialStage - 1])
+    setBoard(gameRef.current.getBoard())
+    setIsOver(false)
+    setWinner(null)
+    setSelectedCell(null)
+    setHighlightedCells([])
+  }, [initialStage])
 
   const selectCell = useCallback((row: number, col: number) => {
     const game = gameRef.current
