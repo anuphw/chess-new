@@ -1,0 +1,17 @@
+{
+  "last_updated": "YYYY-MM-DD",
+  "session_summary": "Project just initialized. No features implemented yet.",
+  "features": [
+    {
+      "id": "example-feature",
+      "name": "Example Feature",
+      "status": "pending",
+      "notes": "Replace this with your first real feature"
+    }
+  ],
+  "next_actions": [
+    "Fill in harness/CONTEXT.md with your project's architecture",
+    "Replace the example feature in status.json with real features",
+    "Run harness/scripts/test.sh to verify the test setup works"
+  ]
+}
