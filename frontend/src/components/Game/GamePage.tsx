@@ -11,10 +11,10 @@ import type { UserProfile, CoachMessage } from '../../types'
 
 interface Props {
   profile: UserProfile
-  onGameSaved: () => void
+  onGameSaved?: () => void
 }
 
-export default function GamePage({ profile, onGameSaved }: Props) {
+export default function GamePage({ profile, onGameSaved: _onGameSaved }: Props) {
   const game = useChessGame()
   const { analysis, analyze } = useStockfish()
   const { hintsEnabled, toggle: toggleHints } = useMoveHints()

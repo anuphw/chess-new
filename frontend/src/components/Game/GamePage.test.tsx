@@ -4,8 +4,8 @@ import GamePage from './GamePage'
 import type { UserProfile } from '../../types'
 
 vi.mock('react-chessboard', () => ({
-  Chessboard: ({ onSquareClick }: { onSquareClick: (sq: string) => void }) => (
-    <div data-testid="chess-board" onClick={() => onSquareClick('e2')} />
+  Chessboard: ({ options }: { options?: { onSquareClick?: (args: { square: string }) => void } }) => (
+    <div data-testid="chess-board" onClick={() => options?.onSquareClick?.({ square: 'e2' })} />
   ),
 }))
 vi.mock('../../hooks/useStockfish', () => ({

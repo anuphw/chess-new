@@ -3,9 +3,9 @@ import { vi } from 'vitest'
 import ChessBoard from './ChessBoard'
 
 vi.mock('react-chessboard', () => ({
-  Chessboard: ({ onSquareClick, customSquareStyles }: { onSquareClick: (sq: string) => void, customSquareStyles: Record<string, unknown> }) => (
-    <div data-testid="chess-board" onClick={() => onSquareClick('e2')}>
-      {Object.keys(customSquareStyles || {}).map(sq => (
+  Chessboard: ({ options }: { options?: { onSquareClick?: (args: { square: string }) => void; squareStyles?: Record<string, unknown> } }) => (
+    <div data-testid="chess-board" onClick={() => options?.onSquareClick?.({ square: 'e2' })}>
+      {Object.keys(options?.squareStyles || {}).map(sq => (
         <div key={sq} data-testid={`highlight-${sq}`} />
       ))}
     </div>
