@@ -830,6 +830,8 @@ echo "=== Running frontend tests ==="
 cd "$(dirname "$0")/../../frontend"
 npm test
 
+# Note: the backend section below will fail until Task 20 (FastAPI backend) is complete.
+# During Chunks 1–3, run frontend tests directly with: cd frontend && npm test
 echo "=== Running backend tests ==="
 cd "$(dirname "$0")/../../backend"
 uv run pytest
@@ -2185,7 +2187,7 @@ export default function CoachPanel({ messages, onSendMessage }: Props) {
 
   useEffect(() => {
     if (transcript) onSendMessage(transcript)
-  }, [transcript])
+  }, [transcript, onSendMessage])
 
   const lastCoachMsg = [...messages].reverse().find(m => m.role === 'coach')
 
