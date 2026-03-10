@@ -290,6 +290,24 @@ CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
 
 ---
 
+## Curriculum (Russian Method)
+
+Lesson topics taught in this order, each becoming the `lessonTopic` field in coach context:
+
+1. Rook — straight lines, checkmate with King + Rook
+2. Bishop — diagonals, light/dark squares
+3. Queen — combined Rook + Bishop power
+4. King — one square any direction, opposition concept
+5. Knight — L-shape, can jump over pieces
+6. Pawn — forward only, capture diagonal, promotion
+7. Endgames — King activity, pawn races
+8. Openings — center control, rapid development
+9. Tactics — forks, pins, skewers, discovered attacks
+
+**Sequencing:** Curriculum progression is managed by the frontend via `currentLesson` in Firestore. The coach AI receives the current `lessonTopic` and tailors responses to that concept. No lesson gating in MVP — `currentLesson` advances after the coach judges the concept understood (via natural conversation).
+
+---
+
 ## Build Order
 
 Follow the spec's 21-step sequence:
